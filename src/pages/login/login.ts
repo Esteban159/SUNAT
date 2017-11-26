@@ -22,16 +22,14 @@ export class LoginPage {
 
     public login() {
         //si quieres ver el homePage descomentame pero comenta toda la funcion this.service.login
-        //this.navCtrl.setRoot('Situacion');
-        this.service.login(this.registerCredentials).subscribe(res => {
-        
+        this.navCtrl.setRoot('Situacion');
+        /*this.service.login(this.registerCredentials).subscribe(res => {
           if (res.success) {
             this.navCtrl.setRoot('HomePage');
           } else {
             this.showError("Access Denied");
           }
-          console.log(res);
-        });
+        });*/
     }
 
     showError(text) {

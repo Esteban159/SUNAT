@@ -13,10 +13,11 @@ import {HttpModule} from '@angular/http';
 import { HomePageModule } from '../pages/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
+import { bienPage } from '../pages/bienvenido/bien';
 @NgModule({
   declarations: [
     MyApp,
-    LoginPage,
+    bienPage,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,7 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    LoginPage
+    bienPage
   ],
   providers: [
     StatusBar,

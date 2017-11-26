@@ -37,7 +37,7 @@ import {LoginPage} from '../login/login';
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-menu [content]="mycontent">
+  <ion-menu [content]="elcontent">
       <ion-content>
         <ion-list>
           <p>mi menu</p>
@@ -45,7 +45,7 @@ import {LoginPage} from '../login/login';
       </ion-content>
   </ion-menu>
   <h3 style="color:blue">FACTURACION MENSUAL</h3>
-  <ion-nav #mycontent [root]="BarPage"></ion-nav>
+  <ion-nav #elcontent [root]="BarPage"></ion-nav>
       <ngx-charts-bar-vertical
       [view]="view"
       [scheme]="colorScheme"
@@ -80,13 +80,13 @@ export class BarPage {
   single: any[];
   multi: any[];
 
-  view: any[] = [700, 400];
+  view: any[] = [370, 400];
 
   // options
   showXAxis = true;
   showYAxis = true;
   gradient = false;
-  showLegend = true;
+  showLegend = false;
   showXAxisLabel = true;
   xAxisLabel = 'Mes';
   showYAxisLabel = true;
