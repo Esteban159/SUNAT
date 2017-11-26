@@ -1,0 +1,125 @@
+<ion-header>
+    
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <span class="button-inner">
+          <ion-icon name="menu" role="img" aria-label="menu"></ion-icon>
+      </span>
+    </button>
+    <div class="toolbar-content">
+      <ion-title class="title">
+        <div class="toolbar-title">
+          MENU
+        </div>
+      </ion-title>
+    </div>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goToLoginPage()">
+          <div class="toolbar-content">
+              <ion-title class="title">
+                <div class="toolbar-title">
+                  SALIR
+                </div>
+              </ion-title>
+            </div>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+      <ion-menu [content]="mycontent">
+      <ion-content>
+        <ion-list>
+          <p>mi menu</p>
+        </ion-list>
+      </ion-content>
+  </ion-menu>
+  <ion-nav #mycontent [root]="Situacion"></ion-nav>
+  
+    <ion-card class="card">
+        <img src="./assets/line-chart.svg" height="200px">
+        <ion-card-content class="card-content">
+            <ion-card-title style="color:blue;">SITUACION ACTUAL</ion-card-title>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-list>
+            <ion-item>
+                <ion-label style="color:blue;">
+                    <ion-icon name="paper"></ion-icon>&nbsp;&nbsp;&nbsp;Facturacion</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-md-2 col-lg-2 col-2>
+                            <div id="triangulo"></div>
+                        </ion-col>
+                        <ion-col col-md-4 col-lg-4 col-sm-4>
+                            <p id="resultado">10%
+                                <p>
+                        </ion-col>
+                        <ion-col col-md-6 col-lg-6 col-sm-6 (click)="gotobar()">
+                            <p>Mi ultimo mes</p>
+                            <p>S/30000</p>
+                            <p>Ver detalles</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+    <br>
+    <ion-card>
+        <ion-list>
+            <ion-item>
+                <ion-label style="color:blue;">
+                    <ion-icon name="logo-usd"></ion-icon>&nbsp;&nbsp;&nbsp;Ventas</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-md-2 col-lg-2 col-2>
+                            <div id="triangulo"></div>
+                        </ion-col>
+                        <ion-col col-md-4 col-lg-4 col-sm-4>
+                            <p id="resultado">8%
+                                <p>
+                        </ion-col>
+                        <ion-col col-md-6 col-lg-6 col-sm-6>
+                            <p>Mi ultimo mes</p>
+                            <p>2000 unidades</p>
+                            <p>Ver detalles</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+        <ion-card>
+        <ion-list>
+            <ion-item>
+                <ion-label style="color:blue;">
+                    <ion-icon name="people"></ion-icon>&nbsp;&nbsp;&nbsp;Clientes</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-md-2 col-lg-2 col-2>
+                            <div id="triangulo"></div>
+                        </ion-col>
+                        <ion-col col-md-4 col-lg-4 col-sm-4>
+                            <p id="resultado">5%
+                                <p>
+                        </ion-col>
+                        <ion-col col-md-6 col-lg-6 col-sm-6>
+                            <p>Mi ultimo mes</p>
+                            <p>500 personas</p>
+                            <p>Ver detalles</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-content class="backgroundImgA">
+    <ion-grid>
+        <ion-row>
+          <ion-col col-lg-4 col-md-2 col-1>
+          </ion-col>
+            <ion-col col-lg-4 col-md-8 col-10>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <ion-card>
+                    <br>
+                    <ion-card-header>
+                      <img src="./assets/logotipo.svg" width="100" height="100"/>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <form #FormLogin="ngForm" (ngSubmit)="login()">
+                        <ion-item>
+                          <ion-label floating>RUC</ion-label>
+                          <ion-input [(ngModel)]="registerCredentials.ruc" name="ruc" type="text" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label floating>Usuario</ion-label>
+                          <ion-input [(ngModel)]="registerCredentials.username" name="username" type="text" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label floating>Clave</ion-label>
+                          <ion-input [(ngModel)]="registerCredentials.password" name="password" type="password" required></ion-input>
+                        </ion-item>
+      
+                          <button class="button button-block button-calm" [disabled]="!FormLogin.form.valid" type="submit" color="danger" full ion-button>ENTRAR
+                          </button>
+      
+                        </form>
+                      <br>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col col-lg-4 col-md-2 col-1>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
